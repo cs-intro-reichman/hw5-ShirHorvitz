@@ -22,7 +22,7 @@ public class MyString {
     public static int countChar(String str, char ch) {
         int count = 0;
         for (int i = 0; i < str.length(); i++){
-            if (str.charAt(i == ch)) {
+            if (str.charAt(i) == ch) {
                 count++;
             }
         }
@@ -44,11 +44,11 @@ public class MyString {
          for (int i = 0; i < str1.length(); i++){
             int count1 = countChar(str1, (char)str1.charAt(i));
             int count2 = countChar(str2, (char)str1.charAt(i));
-            if (count1 < count2) {
-                return true;
+            if (count1 > count2) {
+                return false;
             }
          }
-        return false;
+        return true;
     }
 
     /** Returns a string which is the same as the given string, with a space
